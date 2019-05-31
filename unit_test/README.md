@@ -1,16 +1,31 @@
-# unit_test
 
-Unit test.
+# About
+這裡記錄了學習 Flutter - Dart 如何進行 Unit test 的方法。
 
-## Getting Started
+More information: <https://flutter.dev/docs/cookbook/testing>
 
-This project is a starting point for a Flutter application.
+## Unit Test
 
-A few resources to get you started if this is your first Flutter project:
+### 🎈test functions
 
-- [Lab: Write your first Flutter app](https://flutter.io/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.io/docs/cookbook)
+* [Basic testing](test/basic_test.dart): 一些最基本的語法，expect, contains, start/endsWith 等等
+* [Setup testing](test/setup_test.dart): 學習怎麼樣在 test 前 setup 一些物件，並在結束時 teardown
+* [Asynchronous testing](test/async_test.dart): unit test 最重要的部分，如果搭配 Future, Stream, .. 和不一樣的 emit 與 expect 語法來進行測試
+* 以上參考官方所提供的[文件](https://github.com/dart-lang/test/blob/master/README.md)
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.io/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+
+
+### 🎄Mockito
+* [Adding Dependency](pubspec.yaml)
+* [Mockito testing](test/mockito_test.dart)
+* [官方文件](https://flutter.dev/docs/cookbook/testing/unit/mocking)
+* [Pub for more example](https://pub.dev/packages/mockito)
+
+
+
+# Widget Test
+
+
+
+# Integration Test
+
