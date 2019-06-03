@@ -13,8 +13,8 @@ Bloc Design Study: https://felangel.github.io/bloc/
 * [Counter](bloc_counter)
 * [Timer](bloc_timer)
 * [Infinite List](bloc_infinite_list)
-* Login
-* Weather
+* [Login](bloc_login)
+* [Weather](bloc_weather)
 * Todos
 * Firebase Login
 
