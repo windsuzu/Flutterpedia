@@ -7,7 +7,8 @@ A infinite list example for bloc practice.
 ### Data Layer
 
 - [Post Model](lib/data/post.dart)
-- [Post Api](lib/data/api.dart)
+- [Post Provider](lib/data/post_provider.dart)
+- [Post Repository](lib/data/post_repository.dart)
 
 ### Bloc Layer
 
@@ -21,4 +22,4 @@ A infinite list example for bloc practice.
 
 ### Testing
 
-- 
+- [Post Bloc Test](test/post_bloc_test.dart)

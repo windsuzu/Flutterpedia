@@ -1,22 +1,15 @@
-import 'post.dart';
 import 'package:http/http.dart';
+import 'post.dart';
 import 'dart:async';
 import 'dart:convert';
 
-class Api {
-  static final Api _instance = Api._internal();
-  Client _httpClient;
+class PostProvider {
+  Client httpClient;
 
-  Api._internal() {
-    if (_httpClient == null) {
-      _httpClient = Client();
-    }
-  }
-
-  factory Api() => _instance;
+  PostProvider(this.httpClient);
 
   Future<List<Post>> fetchPosts(int startIndex, int limit) async {
-    final response = await _httpClient.get(
+    final response = await httpClient.get(
         'https://jsonplaceholder.typicode.com/posts?_start=$startIndex&_limit=$limit');
 
     if (response.statusCode == 200) {

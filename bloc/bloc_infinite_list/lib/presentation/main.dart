@@ -4,6 +4,9 @@ import '../bloc/bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'bottom_loader.dart';
 import 'post_widget.dart';
+import '../data/post_provider.dart';
+import '../data/post_repository.dart';
+import 'package:http/http.dart';
 
 void main() {
   BlocSupervisor.delegate = SimpleBlocDelegate();
@@ -41,7 +44,8 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final _scrollController = ScrollController();
-  final PostBloc _postBloc = PostBloc();
+  final PostBloc _postBloc = PostBloc(
+      postRepository: PostRepository(postProvider: PostProvider(Client())));
   final _scrollThreshold = 200.0;
 
   @override

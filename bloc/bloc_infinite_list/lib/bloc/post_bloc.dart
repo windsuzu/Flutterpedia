@@ -1,10 +1,14 @@
 import 'dart:async';
 import 'package:bloc/bloc.dart';
 import './bloc.dart';
-import '../data/api.dart';
+import '../data/post_repository.dart';
 import 'package:rxdart/rxdart.dart';
 
 class PostBloc extends Bloc<PostEvent, PostState> {
+  PostRepository postRepository;
+
+  PostBloc({this.postRepository});
+
   @override
   PostState get initialState => PostUninitialized();
 
@@ -24,13 +28,13 @@ class PostBloc extends Bloc<PostEvent, PostState> {
     if (event is Fetch && !_hasReachedMax(currentState)) {
       try {
         if (currentState is PostUninitialized) {
-          final posts = await Api().fetchPosts(0, 20);
+          final posts = await postRepository.getPosts(0, 20);
           yield PostLoaded(posts: posts, hasReachedMax: false);
           return;
         }
         if (currentState is PostLoaded) {
-          final posts = await Api()
-              .fetchPosts((currentState as PostLoaded).posts.length, 20);
+          final posts = await postRepository.getPosts(
+              (currentState as PostLoaded).posts.length, 20);
           yield posts.isEmpty
               ? (currentState as PostLoaded).copyWith(hasReachedMax: true)
               : PostLoaded(
