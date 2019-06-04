@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "302455728168",
+    "firebase_url": "https://flutterpedia-b7695.firebaseio.com",
+    "project_id": "flutterpedia-b7695",
+    "storage_bucket": "flutterpedia-b7695.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:302455728168:android:62a8606e915043f4",
+        "android_client_info": {
+          "package_name": "com.sejkai.bloc_firebase_login"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "302455728168-1g5khlr3fpte2dt2lahs48vvrpu202vd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIVRq_-PR3gcIB8L2qgHw8GHfZ_VesizE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "302455728168-1g5khlr3fpte2dt2lahs48vvrpu202vd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

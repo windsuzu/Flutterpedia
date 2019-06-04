@@ -29,6 +29,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.2"
+  cloud_firestore:
+    dependency: "direct dev"
+    description:
+      name: cloud_firestore
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.9.13+1"
   collection:
     dependency: transitive
     description:
@@ -44,19 +51,33 @@ packages:
     source: hosted
     version: "0.1.2"
   equatable:
-    dependency: "direct main"
+    dependency: "direct dev"
     description:
       name: equatable
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.2.6"
+  firebase_auth:
+    dependency: "direct dev"
+    description:
+      name: firebase_auth
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.8.4+5"
+  firebase_core:
+    dependency: transitive
+    description:
+      name: firebase_core
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.3.4"
   flutter:
     dependency: "direct main"
     description: flutter
     source: sdk
     version: "0.0.0"
   flutter_bloc:
-    dependency: "direct main"
+    dependency: "direct dev"
     description:
       name: flutter_bloc
       url: "https://pub.dartlang.org"
@@ -67,20 +88,20 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  http:
-    dependency: "direct main"
+  font_awesome_flutter:
+    dependency: "direct dev"
     description:
-      name: http
+      name: font_awesome_flutter
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.12.0+2"
-  http_parser:
-    dependency: transitive
+    version: "8.4.0"
+  google_sign_in:
+    dependency: "direct dev"
     description:
-      name: http_parser
+      name: google_sign_in
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.1.3"
+    version: "4.0.2"
   matcher:
     dependency: transitive
     description:
@@ -89,19 +110,12 @@ packages:
     source: hosted
     version: "0.12.5"
   meta:
-    dependency: transitive
+    dependency: "direct dev"
     description:
       name: meta
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.6"
-  mockito:
-    dependency: "direct dev"
-    description:
-      name: mockito
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "4.1.0"
   path:
     dependency: transitive
     description:
@@ -193,3 +207,4 @@ packages:
     version: "2.0.8"
 sdks:
   dart: ">=2.2.0 <3.0.0"
+  flutter: ">=1.5.0 <2.0.0"
