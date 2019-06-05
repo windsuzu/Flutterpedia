@@ -15,8 +15,9 @@ Bloc Design Study: https://felangel.github.io/bloc/
 * [Infinite List](bloc_infinite_list)
 * [Login](bloc_login)
 * [Weather](bloc_weather)
-* Todos
-* Firebase Login
+* [Todos](bloc_todos)
+* [Firebase Login](bloc_firebase_login)
+* [BlocListener](bloc_listener)
 
 
 
