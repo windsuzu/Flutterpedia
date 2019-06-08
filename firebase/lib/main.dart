@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:firebase/crashlytics/crash_screen.dart';
 import 'package:firebase/auth/auth_screen.dart';
+import 'package:firebase/firestore/firestore_screen.dart';
+import 'package:firebase/remote_config/remote_config_screen.dart';
+import 'package:firebase/messaging/cloud_messaging_screen.dart';
 
 void main() {
   Crashlytics.instance.enableInDevMode = true;
@@ -33,6 +36,9 @@ class HomePage extends StatelessWidget {
         children: <Widget>[
           _buildNavigationTile(context, 'Crashlytics', CrashScreen()),
           _buildNavigationTile(context, 'Auth', AuthScreen()),
+          _buildNavigationTile(context, 'FireStore', FirestoreScreen()),
+          _buildNavigationTile(context, 'Remote Config', RemoteConfigScreen()),
+          _buildNavigationTile(context, 'Cloud Messaging', CloudMessagingScreen()),
         ],
       ),
     );

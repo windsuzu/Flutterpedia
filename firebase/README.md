@@ -23,22 +23,12 @@
 ## 🎮 Crashlytics
 * Pub: https://pub.dev/packages/firebase_crashlytics
 
+
+
 1. Follow the installation instructions from the link above.
-2. Import the plugin in the root of your app.
-3. Setup crashlytics and go to firebase console to build connection.
+2. Import the plugin in the root of the app.
+3. [Setup crashlytics](lib/main.dart) and go to firebase console to build connection.
 
-```dart
-import 'package:firebase_crashlytics/firebase_crashlytics.dart';
-
-void main() {
-  Crashlytics.instance.enableInDevMode = true;
-
-  FlutterError.onError = (FlutterErrorDetails details) {
-    Crashlytics.instance.onError(details);
-  };
-  runApp(MyApp());
-}
-```
 ![](D:\Project\Flutter\Flutterpedia\firebase\readme_assets\crashlytics1.jpg)
 
 4. Try to push an error by easily [click the buttons](lib/crashlytics/crash_screen.dart). And the errors can be viewed from firebase console.
@@ -49,11 +39,14 @@ void main() {
 
 ## 🎰 Authentication
 * Pub: https://pub.dev/packages/firebase_auth
+
+
+
 1. Follow the installation instructions from the link above. [auth + googleSignIn]
 
-2. Turn on Authentication providers from firebase console.
+2. Activate Authentication providers from firebase console.
 
-3. Implementing with correspond sign in provider.
+3. Implementing with corresponding sign in provider.
 
    * [Email / Password Registration](lib/auth/register_screen.dart)
    * [Email / Password Sign In](lib/auth/email_pwd_sign_in_form.dart)
@@ -67,25 +60,64 @@ void main() {
 ## 🎲 Cloud Firestore
 * Pub: https://pub.dev/packages/cloud_firestore
 
+
+
+1. Follow the installation instructions from the link above.
+2. Activate Cloud Firestore from firebase console.
+3. Follow either pub usage instruction or the [firebase tutorial](https://codelabs.developers.google.com/codelabs/flutter-firebase/index.html#0).
+4. [Implement CRUD functions](lib/firestore/firestore_screen.dart) and be aware of the race condition.
+
+
+
 ## 🎴 Storage
 * Pub: https://pub.dev/packages/firebase_storage
+
+
+
+1. Follow the installation instructions from the link above.
+2. Activate Storage function from firebase console.
+3. Example of Firebase Storage is [here](https://github.com/flutter/plugins/tree/master/packages/firebase_storage).
+
+
 
 ## 🃏 Remote Config
 * Pub: https://pub.dev/packages/firebase_remote_config
 
+
+
+1. Follow the installation instructions from the link above.
+
+2. [Implement Remote config in app.](lib/remote_config/remote_config_screen.dart)
+3. Activate remote config from firebase console.
+4. create a new parameter and publish the change.
+
+![](D:\Project\Flutter\Flutterpedia\firebase\readme_assets\remote_config1.jpg)
+
+
+
 ## 🀄 Cloud Messaging
 * Pub: https://pub.dev/packages/firebase_messaging
+
+
+
+1. Follow the installation instructions from the link above.
+2. [Implement FCM receive functions](lib/messaging/cloud_messaging_screen.dart).
+3. Test FCM sending from firebase console [through Cloud Functions or Cloud Messaging].
+4. More details and example is [here](https://github.com/flutter/plugins/tree/master/packages/firebase_messaging).
+
+
 
 ## 🏆 Cloud Functions
 * Pub: https://pub.dev/packages/cloud_functions
 
 
 
+#### 🎆 Cloud Functions Server side [Node.js required]
 
+I made a FCM push notification function [here](firebase_function/functions/index.js).
 
-
-
-
+* [Get Started](https://firebase.google.com/docs/functions/get-started)
+* [Official function examples](https://github.com/firebase/functions-samples)
 
 
 
