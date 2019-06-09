@@ -29,11 +29,11 @@
 2. Import the plugin in the root of the app.
 3. [Setup crashlytics](lib/main.dart) and go to firebase console to build connection.
 
-![](D:\Project\Flutter\Flutterpedia\firebase\readme_assets\crashlytics1.jpg)
+![](readme_assets\crashlytics1.jpg)
 
 4. Try to push an error by easily [click the buttons](lib/crashlytics/crash_screen.dart). And the errors can be viewed from firebase console.
 
-![](D:\Project\Flutter\Flutterpedia\firebase\readme_assets\crashlytics2.jpg)
+![](readme_assets\crashlytics2.jpg)
 
    
 
@@ -91,7 +91,7 @@
 3. Activate remote config from firebase console.
 4. create a new parameter and publish the change.
 
-![](D:\Project\Flutter\Flutterpedia\firebase\readme_assets\remote_config1.jpg)
+![](readme_assets\remote_config1.jpg)
 
 
 
