@@ -11,12 +11,12 @@ void main() => runApp(MyApp());
 Map<String, WidgetBuilder> _routes(BuildContext context) {
   return {
     '/': (context) => HomePage(),
+    '/widget_screen': (context) => WidgetScreen(),
     '/hero_home_screen': (context) => HeroHomeScreen(),
     '/navigation_screen': (context) => NavigationScreen(),
     '/staggered_screen': (context) => StaggeredScreen(),
     '/guillotine_screen': (context) => GuillotineScreen(),
     '/login_screen': (context) => LoginScreen(),
-    '/widget_screen': (context) => WidgetScreen(),
   };
 }
 
@@ -37,13 +37,14 @@ class HomePage extends StatelessWidget {
       body: Container(
         child: ListView(
           children: <Widget>[
+            _buildListTile('Widget Animation', context, '/widget_screen'),
             _buildListTile('Hero Animation', context, '/hero_home_screen'),
             _buildListTile(
                 'Navigation Animation', context, '/navigation_screen'),
-          _buildListTile('Staggered Animation', context, '/staggered_screen'),
-          _buildListTile('Guillotine Animation', context, '/guillotine_screen'),
-          _buildListTile('Login Animation', context, '/login_screen'),
-          _buildListTile('Widget Animation', context, '/widget_screen'),
+            _buildListTile('Staggered Animation', context, '/staggered_screen'),
+            _buildListTile(
+                'Guillotine Animation', context, '/guillotine_screen'),
+            _buildListTile('Login Animation', context, '/login_screen'),
           ],
         ),
       ),
