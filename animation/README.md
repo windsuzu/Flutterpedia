@@ -1,16 +1,75 @@
 # Animation
 
-Flutter Animation
+Flutter Animations.
 
-## Getting Started
+* [Widget Animation](#widget-animation)
+* [Hero Animation](#hero-animation)
+* [Navigation Animation](#navigation-animation)
+* [Staggered Animation](#staggered-animation)
+* [Guillotine Animation](#guillotine-animation)
+* [Login Animation](#login-animation)
 
-This project is a starting point for a Flutter application.
+## Widget Animation
 
-A few resources to get you started if this is your first Flutter project:
+### AnimatedList
+[<img src="readme_assets/animated_list.gif" width="200"/>](lib/widget/widget_screen.dart)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+### AnimatedOpacity
+[<img src="readme_assets/animated_opacity.gif" width="200"/>](lib/widget/animated_opacity.dart)
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+### AnimatedDefaultTextStyle
+[<img src="readme_assets/animated_default_textstyle.gif" width="200"/>](lib/widget/animated_default_textstyle.dart)
+
+### AnimatedCrossFade
+[<img src="readme_assets/animated_crossfade.gif" width="200"/>](lib/widget/animated_cross_fade.dart)
+
+### AnimatedContainer
+[<img src="readme_assets/animated_container.gif" width="200"/>](lib/widget/animated_container.dart)
+
+### AnimatedAlign
+[<img src="readme_assets/animated_align.gif" width="200"/>](lib/widget/animated_align.dart)
+
+### AnimatedPositioned
+[<img src="readme_assets/animated_positioned.gif" width="200"/>](lib/widget/animated_positioned.dart)
+
+### AnimatedPadding
+[<img src="readme_assets/animated_padding.gif" width="200"/>](lib/widget/animated_padding.dart)
+
+### AnimatedSwitcher
+[<img src="readme_assets/animated_switcher.gif" width="200"/>](lib/widget/animated_switcher.dart)
+
+### DecoratedBoxTransition
+[<img src="readme_assets/decorated_box_transition.gif" width="200"/>](lib/widget/decorated_box_transition.dart)
+
+### PositionedTransition
+[<img src="readme_assets/positioned_transition.gif" width="200"/>](lib/widget/positioned_transition.dart)
+
+
+## Hero Animation
+[<img src="readme_assets/hero.gif" width="200"/>](lib/hero)
+
+## Navigation Animation
+### Fade Navigation
+[<img src="readme_assets/navigation_fade.gif" width="200"/>](lib/navigation/navigation_screen.dart)
+
+### Scale Navigation
+[<img src="readme_assets/navigation_scale.gif" width="200"/>](lib/navigation/navigation_screen.dart)
+
+### Slide Navigation
+[<img src="readme_assets/navigation_slide.gif" width="200"/>](lib/navigation/navigation_screen.dart)
+
+### Rotation Navigation
+[<img src="readme_assets/navigation_rotation.gif" width="200"/>](lib/navigation/navigation_screen.dart)
+
+### Size Navigation
+[<img src="readme_assets/navigation_size.gif" width="200"/>](lib/navigation/navigation_screen.dart)
+
+## Staggered Animation
+[<img src="readme_assets/staggered.gif" width="200"/>](lib/staggered)
+
+## Guillotine Animation
+[<img src="readme_assets/guillotine.gif" width="200"/>](lib/guillotine_menu)
+
+## Login Animation
+[<img src="readme_assets/login.gif" width="200"/>](lib/login)
+

@@ -23,7 +23,11 @@ Map<String, WidgetBuilder> _routes(BuildContext context) {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(initialRoute: '/', routes: _routes(context));
+    return MaterialApp(
+      initialRoute: '/',
+      routes: _routes(context),
+      debugShowCheckedModeBanner: false,
+    );
   }
 }
 
