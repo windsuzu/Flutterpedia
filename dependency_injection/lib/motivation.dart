@@ -51,4 +51,6 @@ class LikeButton {
 // Data Model
 class AppInfo {
   int likeCount = 0;
+
+  void addLike() => likeCount++;
 }

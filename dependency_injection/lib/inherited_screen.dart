@@ -57,17 +57,8 @@ class _InheritedScreenState extends State<InheritedScreen> {
       body: InheritedInjection(
         increment: _increment,
         appInfo: appInfo,
-        child: Container(
-          width: double.infinity,
-          height: double.infinity,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              LikeButton(),
-              LikeButton(),
-            ],
-          ),
+        child: Center(
+          child: LikeButton(),
         ),
       ),
     );

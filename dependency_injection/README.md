@@ -29,3 +29,13 @@ InheritedWidget 可以讓同個 widget tree 下的 widget 透過 BuildContext �
 
 實作程式碼在這 [Code](lib/inherited_screen.dart)
 
+
+## Solution 2 - Provider
+
+Provider 可以說是 InheritedWidget 的加強版，且有非常多特殊的變型，如 StreamProvider, ChangeNotifierProvider, ListenableProvider, ...
+
+Provider 一樣將在 widget tree 頂端注入讓底下 widget 可以共同使用的變數。
+
+實作程式碼在這 [Code](lib/provider_screen.dart)
+
+> 同場加映 StreamProvider: [Code](lib/stream_provider_screen.dart)
