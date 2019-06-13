@@ -17,4 +17,15 @@
 * Pub: https://pub.dev/packages/connectivity
 * [Code](lib/connectivity_screen.dart)
 
+## URL Launcher
+* Pub: https://pub.dev/packages/url_launcher
+* [Code](lib/url_launcher_screen.dart)
 
+## Share 
+* Official Pub: https://pub.dev/packages/share
+    * Can only send texts or links ..
+    * [Code](lib/share_screen.dart)
+    
+* If you want to share images, videos, files, TRY 
+    * [esys-flutter-share](https://github.com/esysberlin/esys-flutter-share)
+    * [ShareExtend](https://pub.dev/packages/share_extend)

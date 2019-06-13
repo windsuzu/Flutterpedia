@@ -3,6 +3,8 @@ import 'package:network/json_screen.dart';
 import 'package:network/http_screen.dart';
 import 'package:network/dio_screen.dart';
 import 'package:network/connectivity_screen.dart';
+import 'package:network/url_launcher_screen.dart';
+import 'package:network/share_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -39,6 +41,18 @@ class MyApp extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                             builder: (context) => ConnectivityScreen())),
+                  ),
+                  ListTile(
+                    title: Text('Url Launcher Example'),
+                    onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => UrlLauncherScreen())),
+                  ),
+                  ListTile(
+                    title: Text('Share Example'),
+                    onTap: () => Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => ShareScreen())),
                   )
                 ],
               );

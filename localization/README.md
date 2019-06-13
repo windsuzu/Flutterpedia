@@ -13,7 +13,7 @@ flutter_localizations:
 
 ## Steps
 
-1. Setup delegates at the root of app
+1. #### Setup delegates at the root of app
 
 ```dart
 import 'package:localization/generated/i18n.dart';
@@ -38,7 +38,7 @@ MaterialApp(
 
 
 
-2. Setup arb files
+2. #### Setup arb files
 
 Plugin will help you generate `English` arb file automatically. 
 
@@ -62,5 +62,48 @@ AppBar(
 
 
 
-3. LocaleOverrideDelegate
+3. #### LocaleOverrideDelegate
+
+Adding this delegate can help us to change locale efficiently.
+
+```dart
+class SpecifiedLocalizationDelegate extends LocalizationsDelegate<S> {
+  final Locale overriddenLocale;
+
+  const SpecifiedLocalizationDelegate(this.overriddenLocale);
+
+  @override
+  bool isSupported(Locale locale) => overriddenLocale != null;
+
+  @override
+  Future<S> load(Locale locale) =>
+      GeneratedLocalizationsDelegate().load(overriddenLocale);
+
+  @override
+  bool shouldReload(SpecifiedLocalizationDelegate old) => true;
+}
+```
+
+
+
+Initialize it with null locale and put into `localizationsDelegates`
+
+```dart
+_localeOverrideDelegate = SpecifiedLocalizationDelegate(null);
+
+localizationsDelegates: [
+	_localeOverrideDelegate,
+	S.delegate,
+	GlobalMaterialLocalizations.delegate,
+	GlobalWidgetsLocalizations.delegate,
+],
+```
+
+
+
+Reassign it when the application's locale changed.
+
+```dart
+_localeOverrideDelegate = SpecifiedLocalizationDelegate(newLocale);
+```
 

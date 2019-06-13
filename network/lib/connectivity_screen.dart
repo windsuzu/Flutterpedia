@@ -34,7 +34,7 @@ class _ConnectivityScreenState extends State<ConnectivityScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Dio Example')),
+      appBar: AppBar(title: Text('Connectivity Example')),
       body: Container(
         constraints: BoxConstraints.expand(),
         child: Column(

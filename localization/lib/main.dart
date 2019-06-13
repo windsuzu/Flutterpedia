@@ -4,12 +4,32 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 
 void main() => runApp(MyApp());
 
-SpecifiedLocalizationDelegate _localeOverrideDelegate;
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
 
-class MyApp extends StatelessWidget {
+class _MyAppState extends State<MyApp> {
+  SpecifiedLocalizationDelegate _localeOverrideDelegate;
+
+  @override
+  void initState() {
+    super.initState();
+    _localeOverrideDelegate = SpecifiedLocalizationDelegate(null);
+    applic.onLocaleChanged = (locale) {
+      setState(() {
+        final newLocale = (locale.languageCode == 'zh')
+            ? Locale('en', '')
+            : Locale('zh', 'TW');
+
+        applic.currentLocale = newLocale;
+        _localeOverrideDelegate = SpecifiedLocalizationDelegate(newLocale);
+      });
+    };
+  }
+
   @override
   Widget build(BuildContext context) {
-    _localeOverrideDelegate = SpecifiedLocalizationDelegate(null);
     return MaterialApp(
         title: 'Localization Demo',
         localizationsDelegates: [
@@ -42,12 +62,7 @@ class _HomePageState extends State<HomePage> {
     return Center(
       child: FlatButton(
           shape: StadiumBorder(side: BorderSide(color: Colors.green)),
-          onPressed: () {
-            setState(() {
-              _localeOverrideDelegate =
-                  SpecifiedLocalizationDelegate(Locale('zh', 'TW'));
-            });
-          },
+          onPressed: () => applic.onLocaleChanged(applic.currentLocale),
           child: Text(S.of(context).button)),
     );
   }
@@ -68,3 +83,24 @@ class SpecifiedLocalizationDelegate extends LocalizationsDelegate<S> {
   @override
   bool shouldReload(SpecifiedLocalizationDelegate old) => true;
 }
+
+typedef void LocaleChangeCallback(Locale locale);
+
+class APPLIC {
+  final List<String> supportedLanguages = ['en', 'zh'];
+
+  Iterable<Locale> supportedLocales() =>
+      supportedLanguages.map<Locale>((lang) => Locale(lang, ''));
+
+  LocaleChangeCallback onLocaleChanged;
+  Locale currentLocale = Locale('en');
+  static final APPLIC _applic = APPLIC._internal();
+
+  factory APPLIC() {
+    return _applic;
+  }
+
+  APPLIC._internal();
+}
+
+APPLIC applic = new APPLIC();
