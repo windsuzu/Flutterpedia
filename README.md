@@ -28,6 +28,12 @@ Inherited Widget, Provider, ...
 
 
 
+## 🤩[MobX](mobx)
+
+不同於 Bloc 的另一種 State management framework.
+
+
+
 ## 😀 [Unit test](unit_test)
 
 包含 unit test, asynchronous test, mockito 到 widget test, integration test
