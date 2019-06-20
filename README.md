@@ -28,7 +28,7 @@ Inherited Widget, Provider, ...
 
 
 
-## 🤩[MobX](mobx)
+## 🤩 [MobX](mobx)
 
 不同於 Bloc 的另一種 State management framework.
 
@@ -49,6 +49,12 @@ Inherited Widget, Provider, ...
 ## 🤗 [Localization](localization)
 
 Hello, 你好, こんにちは
+
+
+
+## 🤯 [Local Storage](local_storage)
+
+SharedPreferences & Sqflite with Android Debug Database!
 
 
 

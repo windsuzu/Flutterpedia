@@ -54,11 +54,7 @@ abstract class CounterBase with Store {
 
 ### Computed Observables
 
-App 的 `state` 又可以分為 `core-state` 和 `derived-state`，例如姓名中的 `姓氏` 和 `名稱` 屬於一個人姓名的 core-state，而現在有一個 derived-state 稱為  `全名` ，即是透過 `姓氏` 和 `名稱` 這兩個 core-state 來產生。
-
-> core-state => @observable
->
-> derived-state => @computed
+App 的 `state` 又可以分為 `core-state` 和 `derived-state`，例如姓名中的 `firstname` 和 `lastname` 屬於一個人姓名的 core-state，而現在有一個 derived-state 稱為  `fullname` ，即是透過 `firstname` 和 `lastname` 這兩個 core-state 來產生。
 
 ```dart
 import 'package:mobx/mobx.dart';
@@ -79,6 +75,10 @@ abstract class ContactBase with Store {
 }
 ```
 
+> core-state => @observable
+>
+> derived-state => @computed
+>
 > fullname 將會隨著 firstname & lastname 的改變而改變。
 
 
@@ -148,7 +148,7 @@ Reaction 有多種不同的版本，但都會返回一個 `ReactionDisposer` 用
 
 ##### ReactionDisposer autorun(Function(Reaction) fn)
 
-Runs the reaction immediately and also on any change in the observables used inside `fn`.
+reaction 將直接執行一次，並且之後在 `fn` 裡的 observables 改變時也會立刻執行。
 
 ```dart
 import 'package:mobx/mobx.dart';
@@ -161,18 +161,18 @@ greeting.value = 'Hello MobX';
 
 // Done with the autorun()
 dispose();
-```
 
-Prints:
 
-```dart
-Hello World
-Hello MobX
+// Prints:
+// Hello World
+// Hello MobX
 ```
 
 
 
 ##### ReactionDisposer reaction\<T>(T Function(Reaction) predicate, void Function(T) effect)
+
+只觀察在 `predicate()` 中的 observables，等到他們改變時，便執行 `effect()` 裡的動作。
 
 ```dart
 import 'package:mobx/mobx.dart';
@@ -185,17 +185,19 @@ greeting.value = 'Hello MobX'; // Cause a change
 
 // Done with the reaction()
 dispose();
-```
 
-Prints:
 
-```
-Hello MobX
+// Prints:
+// Hello MobX
 ```
 
 
 
 ##### ReactionDisposer when(bool Function(Reaction) predicate, void Function() effect)
+
+只觀察在 `predicate()` 中的 observables，等到他們改變且為 `true` 時，便執行 `effect()` 裡的動作。
+
+執行完後會自動 dispose，可以將他視為 **一次性** 的 `reaction`。 也可以在觸發之前就先 dispose 他。
 
 ```dart
 import 'package:mobx/mobx.dart';
@@ -205,17 +207,17 @@ String greeting = Observable('Hello World');
 final dispose = when((_) => greeting.value == 'Hello MobX', () => print('Someone greeted MobX'));
 
 greeting.value = 'Hello MobX'; // Causes a change, runs effect and disposes
-```
 
-Prints:
 
-```dart
-Someone greeted MobX
+// Prints:
+// Someone greeted MobX
 ```
 
 
 
 ##### Future\<void> asyncWhen(bool Function(Reaction) predicate)
+
+相當於 `when` 但是是回傳 `Future`。是一個等待 `predicate()` 變成 `true` 的好方法。
 
 ```dart
 final completed = Observable(false);

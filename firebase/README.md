@@ -35,7 +35,13 @@
 
 ![](readme_assets\crashlytics2.jpg)
 
-   
+
+
+## 🎧 Performance
+
+* Pub: https://pub.dev/packages/firebase_performance
+
+
 
 ## 🎰 Authentication
 * Pub: https://pub.dev/packages/firebase_auth
