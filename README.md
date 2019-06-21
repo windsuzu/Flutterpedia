@@ -22,6 +22,12 @@ Dart documentation, flutter guide, standard, ...
 
 
 
+## 😆 [Device](device)
+
+PathProvider, ImagePicker, Camera, Maps, Audio, Video, Sensor, ... All device functionality.
+
+
+
 ## 😂 [Dependency Injection](dependency_injection)
 
 Inherited Widget, Provider, ...
