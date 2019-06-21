@@ -8,6 +8,12 @@
 
 
 
+> Other great relative articles: 
+>
+> * https://medium.com/flutter-community/flutter-push-pop-push-1bb718b13c31
+
+
+
 ## Basics
 
 ### Navigate to a new screen and back
@@ -206,7 +212,7 @@ Navigator.pushNamed(context, '/pagec', arguments: args);
 
 
 
-* [My Example Code](named_routes)
+> 這邊有範例程式碼: [My Example Code](named_routes)
 
 
 
@@ -214,14 +220,139 @@ Navigator.pushNamed(context, '/pagec', arguments: args);
 
 * Github: https://github.com/theyakka/fluro
 
-Fluro 是一個管理 route 以及便利化 navigation 的 third library ，不但支援內建 routes 外，還有各式各樣易使用的 function。
+Fluro 是一個管理 route 以及便利化 navigation 的 third library ，不但支援內建 routes 外，還有各式各樣容易使用的 function。
 
 
 
+### Setup
+
+首先在 app 初始化好 Router，官方建議可以設定一個 static/global 變數來存取這個 Router
+
+```dart
+final router = Router();
+Application.router = router;
+```
 
 
 
+定義需要使用到的 Route Handler
+
+```dart
+var userHandler = Handler(handlerFunc: (context, params) => UserScreen());
+```
 
 
 
-* [My Example Code](fluro_demo)
+再來用初始化好的 Router 定義每個 namedRoutes 對應的 handler
+
+```dart
+static String user = '/user';
+
+router.define(user, handler: userHandler);
+```
+
+
+
+回到 MaterialApp 給予 onGenerateRoute 值
+
+```dart
+return MaterialApp(
+  title: 'Fluro Demo',
+  onGenerateRoute: Application.router.generator,
+);
+```
+
+
+
+如此一來就可以在 App 的任何地方使用 navigation
+
+```dart
+router.navigateTo(context, "/user");
+```
+
+
+
+### Pass Data
+
+先在接收頁面定義好接收的參數與其類型
+
+```dart
+class PageB extends StatelessWidget {
+  final String message;
+  PageB({this.message});
+    ...
+}
+```
+
+
+
+在 Handler 透過 params 得到傳遞值
+
+```dart
+var pageBHandler = Handler(handlerFunc: (context, params) {
+  String message = params["message"][0];
+  return PageB(
+    message: message,
+  );
+});
+```
+
+
+
+利用類似 http get 的方式指定參數給接收頁面
+
+```dart
+final message = 'Hello';
+Application.router.navigateTo(context, "/page_b?message=$message");
+```
+
+
+
+### Custom Transition
+
+navigateTo 有提供多種內建的 transition，但也可以使用 custom 來自訂
+
+```dart
+Application.router.navigateTo(context, '/page_c',
+    // this transition will override the transition from router.define !
+    transition: TransitionType.custom,
+    transitionDuration: Duration(milliseconds: 500),
+    transitionBuilder: (context, anim, secAnim, child) {
+  return ScaleTransition(
+    scale: anim,
+    child: RotationTransition(
+      turns: anim,
+      child: child,
+    ),
+  );
+});
+```
+
+
+
+### Get Result
+
+跟 [return data from screen](#return-data-from-a-screen) 的方法一樣
+
+只要定義好 await function 來取得 navigateTo 返回的 `Future<dynamic>` 即可
+
+```dart
+final result = await Application.router.navigateTo(context, '/page_d');
+
+if (result != null)
+  _scaffoldKey.currentState
+    ..removeCurrentSnackBar()
+    ..showSnackBar(SnackBar(content: Text('Result: $result')));
+```
+
+
+
+在下一頁的 pop 返回 result 即可
+
+```dart
+Navigator.pop(context, 'hello');
+```
+
+
+
+> 這邊有範例程式碼: [My Example Code](fluro_demo)
