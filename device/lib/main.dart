@@ -52,23 +52,23 @@ class MyHomePage extends StatelessWidget {
                 title: "Path Provider",
                 screenNamed: "/path_provider_screen"),
             _buildListTile(
+                context: context, title: "Video", screenNamed: "/video_screen"),
+            _buildListTile(
                 context: context,
                 title: "Camera",
                 screenNamed: "/camera_screen"),
-            _buildListTile(
-                context: context,
-                title: "Google Maps",
-                screenNamed: "/google_maps_screen"),
             _buildListTile(
                 context: context,
                 title: "Image Picker",
                 screenNamed: "/image_picker_screen"),
             _buildListTile(
                 context: context,
+                title: "Google Maps",
+                screenNamed: "/google_maps_screen"),
+            _buildListTile(
+                context: context,
                 title: "Sensor",
                 screenNamed: "/sensor_screen"),
-            _buildListTile(
-                context: context, title: "Video", screenNamed: "/video_screen"),
           ],
         ),
       ),

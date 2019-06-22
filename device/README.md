@@ -40,20 +40,45 @@ Device functionalities.
 
 
 
+## Video
+
+- Pub: https://pub.dev/packages/video_player
+  - Need to follow the installation
+- [Example](lib/screen/video_screen.dart)
+
+
+
 ## Camera
+
+* Pub: https://pub.dev/packages/camera
+  * Need to follow the installation
+  * Migrate AndroidX: https://developer.android.com/jetpack/androidx/migrate
+
+
+* [Example](lib/screen/camera_screen.dart)
+  * Take a picture or record a video then save it by path provider
 
 
 
 ## Image Picker
 
-
-
-## Video
+* Pub: https://pub.dev/packages/image_picker
+  * Need to follow the installation
+* [Example](lib/screen/image_picker_screen.dart)
+  * 
 
 
 
 ## Google Maps
 
+* Pub: https://pub.dev/packages/google_maps_flutter
+
+* [Example](lib/screen/google_maps_screen.dart)
+
 
 
 ## Sensor
+
+* Pub: https://pub.dev/packages/sensors
+* [Example](lib/screen/sensor_screen.dart)
+  * Listen to `accelerometerEvents`, `gyroscopeEvents`, `userAccelerometerEvents`
