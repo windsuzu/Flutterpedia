@@ -135,6 +135,7 @@ class SnakeState extends State<Snake> {
     state = GameState(rows, columns);
   }
 
+  Timer timer;
   double cellSize;
   GameState state;
   AccelerometerEvent acceleration;
@@ -148,16 +149,24 @@ class SnakeState extends State<Snake> {
   void initState() {
     super.initState();
     accelerometerEvents.listen((AccelerometerEvent event) {
-      setState(() {
-        acceleration = event;
-      });
+      if (mounted) {
+        setState(() {
+          acceleration = event;
+        });
+      }
     });
 
-    Timer.periodic(const Duration(milliseconds: 200), (_) {
+    timer = Timer.periodic(const Duration(milliseconds: 200), (_) {
       setState(() {
         _step();
       });
     });
+  }
+
+  @override
+  void dispose() {
+    timer.cancel();
+    super.dispose();
   }
 
   void _step() {

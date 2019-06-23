@@ -3,7 +3,7 @@
 Device functionalities.
 
 
-## Battery
+## 🔋 Battery
 * Pub: https://pub.dev/packages/battery
 
 * [Example](lib/screen/battery_screen.dart)
@@ -12,7 +12,7 @@ Device functionalities.
 
 
 
-## Device Info
+## 📱 Device Info
 
 * Pub: https://pub.dev/packages/device_info
 * [Example](lib/screen/info_screen.dart)
@@ -21,7 +21,7 @@ Device functionalities.
 
 
 
-## Package Info
+## 📦 Package Info
 
 * Pub: https://github.com/flutter/plugins/tree/master/packages/package_info
 * [Example](lib/screen/package_screen.dart)
@@ -29,7 +29,7 @@ Device functionalities.
 
 
 
-## Path Provider
+## 💾 Path Provider
 
 * Pub: https://pub.dev/packages/path_provider
 * Cookbook: https://flutter.dev/docs/cookbook/persistence/reading-writing-files
@@ -40,15 +40,16 @@ Device functionalities.
 
 
 
-## Video
+## 📽️ Video
 
 - Pub: https://pub.dev/packages/video_player
   - Need to follow the installation
 - [Example](lib/screen/video_screen.dart)
+  * Load the video from network and asset, and implement play/pause animation on video player.
 
 
 
-## Camera
+## 📷 Camera
 
 * Pub: https://pub.dev/packages/camera
   * Need to follow the installation
@@ -60,24 +61,28 @@ Device functionalities.
 
 
 
-## Image Picker
+## 🖼️ Image Picker
 
 * Pub: https://pub.dev/packages/image_picker
   * Need to follow the installation
 * [Example](lib/screen/image_picker_screen.dart)
-  * 
+  * Use device camera or gallery to capture video or image.
 
 
 
-## Google Maps
+## 🗺️ Google Maps
 
 * Pub: https://pub.dev/packages/google_maps_flutter
-
+  * Need to follow the installation
+  * [Get the maps API keys](https://developers.google.com/maps/documentation/embed/get-api-key)
+  * [Enable Maps SDK from console](https://console.developers.google.com)
 * [Example](lib/screen/google_maps_screen.dart)
+  * There are a lot of API implementation not cover here
+  * You can find it in the [official examples](https://github.com/flutter/plugins/tree/master/packages/google_maps_flutter/example/lib)
 
 
 
-## Sensor
+## ⚡ Sensor
 
 * Pub: https://pub.dev/packages/sensors
 * [Example](lib/screen/sensor_screen.dart)
