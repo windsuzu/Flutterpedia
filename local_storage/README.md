@@ -50,31 +50,40 @@ D/DebugDB: Open http://XXX.XXX.X.XXX:8080 in your browser
 
 ![](debug.jpg)
 
-
-
-## Shared Preferences
+## 🍒 Shared Preferences
 
 * Pub: https://pub.dev/packages/shared_preferences
 
-
-
 My example for keeping counter value
-
 * [SharedPreferences Model](lib/shared_preferences/counter_preferences.dart)
 * [UI layer](lib/shared_preferences/preferences_screen.dart)
 
 
+## 🍍 Streaming Shared Preferences
 
-## Sqflite
+* Pub: https://pub.dev/packages/streaming_shared_preferences
+
+Streaming Shared Preferences adds reactive functionality on top of shared_preferences.
+
+Same example as default shared preferences.
+* [Model]()
+* [UI]()
+
+
+## 🍌 Sqflite
 
 * Pub: https://pub.dev/packages/sqflite
 * Other useful tutorial: https://medium.com/flutter-community/using-sqlite-in-flutter-187c1a82e8b
 
-
-
 My example for keeping user data in SQLite
-
 * [Sqflite provider](lib/sqflite/sqflite_provider.dart)
 * [User provider model](lib/sqflite/user_provider.dart)
 * [User model](lib/sqflite/user.dart)
 * [UI layer](lib/sqflite/sqflite_screen.dart)
+
+
+## 🥝 Sembast
+
+* Pub: https://pub.dev/packages/sembast
+
+

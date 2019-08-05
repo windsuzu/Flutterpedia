@@ -1,8 +1,8 @@
+import 'package:bloc_timer/presentation/actions.dart' as actions;
 import 'package:flutter/material.dart';
 import '../data/ticker.dart';
 import '../bloc/bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'actions.dart';
 import 'background.dart';
 
 void main() => runApp(MyApp());
@@ -80,7 +80,7 @@ class TimerPage extends StatelessWidget {
                 condition: (previousState, currentState) =>
                     currentState.runtimeType != previousState.runtimeType,
                 bloc: _timerBloc,
-                builder: (context, state) => Actions(),
+                builder: (context, state) => actions.Actions(),
               )
             ],
           ),
