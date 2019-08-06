@@ -61,13 +61,13 @@ My example for keeping counter value
 
 ## 🍍 Streaming Shared Preferences
 
-* Pub: https://pub.dev/packages/streaming_shared_preferences
+* Pub and tutorial: https://pub.dev/packages/streaming_shared_preferences
 
 Streaming Shared Preferences adds reactive functionality on top of shared_preferences.
 
 Same example as default shared preferences.
-* [Model]()
-* [UI]()
+* [Model](lib/streaming_shared_preferences/streaming_counter_preferences.dart)
+* [UI](lib/streaming_shared_preferences/streaming_counter_preferences_screen.dart)
 
 
 ## 🍌 Sqflite
@@ -84,6 +84,9 @@ My example for keeping user data in SQLite
 
 ## 🥝 Sembast
 
-* Pub: https://pub.dev/packages/sembast
+* Pub and tutorial: https://pub.dev/packages/sembast
+* Oher useful tutorial: https://resocoder.com/2019/04/06/flutter-nosql-database-sembast-tutorial-w-bloc/
 
-
+Same example of user data management as Sqflite implementation.
+* [Model](lib/sembast/sembast_db.dart)
+* [UI](lib/sembast/sembast_screen.dart)

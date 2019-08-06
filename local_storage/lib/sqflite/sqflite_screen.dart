@@ -80,6 +80,7 @@ class _SqfliteScreenState extends State<SqfliteScreen> {
 
   void _removeUser(User user) {
     userProvider.deleteUser(user.id);
+    setState(() {});
   }
 }
 
