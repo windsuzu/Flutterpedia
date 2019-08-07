@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:utilities/datetime/date_time_screen.dart';
+import 'package:utilities/json/json_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -10,6 +12,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      routes: {
+        "/json": (_) => JsonScreen(),
+        "/datetime": (_) => DateTimeScreen(),
+      },
       home: MyHomePage(title: 'Utilities Demo'),
     );
   }
@@ -31,7 +37,22 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(),
+      body: ListView.builder(
+        itemBuilder: (context, index) {
+          String routeName = routes.keys.toList()[index];
+          String route = routes[routeName];
+          return ListTile(
+            title: Text("${routes.keys.toList()[index]}"),
+            onTap: () => Navigator.pushNamed(context, route),
+          );
+        },
+        itemCount: routes.length,
+      ),
     );
   }
 }
+
+final Map<String, dynamic> routes = {
+  "Json": "/json",
+  "DateTime": "/datetime",
+};

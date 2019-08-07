@@ -1,4 +1,4 @@
-name: utilities
+name: asynchronous
 description: A new Flutter project.
 
 # The following defines the version and build number for your application.
@@ -19,22 +19,14 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^0.1.2
-  http: ^0.12.0+2
-  # json-serializable
-  json_annotation: ^2.4.0
-  # date-time
-  intl: ^0.15.8
 
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^0.1.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  # json-serializable
-  build_runner: ^1.6.5
-  json_serializable: ^3.1.0
-  
-  
 
 
 # For information on the generic Dart part of this file, see the
