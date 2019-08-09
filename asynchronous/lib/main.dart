@@ -1,3 +1,8 @@
+import 'package:asynchronous/future/future_builder_screen.dart';
+import 'package:asynchronous/future/future_screen.dart';
+import 'package:asynchronous/stream/stream_builder_screen.dart';
+import 'package:asynchronous/stream/stream_controller_screen.dart';
+import 'package:asynchronous/stream/stream_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -6,11 +11,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      title: 'Asynchronous Demo',
+      routes: {
+        "/future": (_) => FutureScreen(),
+        "/future_builder": (_) => FutureBuilderScreen(),
+        "/stream": (_) => StreamScreen(),
+        "/stream_controller": (_) => StreamControllerScreen(),
+        "/stream_builder": (_) => StreamBuilderScreen(),
+      },
+      home: MyHomePage(title: 'Asynchronous Demo'),
     );
   }
 }
@@ -25,14 +34,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,24 +41,28 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.display1,
-            ),
-          ],
+        child: ListView(
+          children: routes
+              .map((key, value) {
+                return MapEntry(
+                    key,
+                    ListTile(
+                      title: Text(key),
+                      onTap: () => Navigator.pushNamed(context, value),
+                    ));
+              })
+              .values
+              .toList(),
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
       ),
     );
   }
 }
+
+var routes = {
+  "Future": "/future",
+  "Future Builder": "/future_builder",
+  "Stream": "/stream",
+  "Stream Controller": "/stream_controller",
+  "Stream Builder": "/stream_builder",
+};
