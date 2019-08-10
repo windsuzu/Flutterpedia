@@ -46,6 +46,12 @@ Stream 可以有非常多種方法來決定接收物件流的方式，可以有 
 Stream 也可以決定是 `單一訂閱 (single subscription)` 或 `廣播 (broadcast)` 模式，
 (若選用單一訂閱，且又出現兩個人同時 listen 同一個 stream 會發生錯誤)
 
+我們需要配合 StreamSubscription 使用，讓 stream 能夠被 pause, resume, 
+還有最重要的 cancel (dispose) 掉，防止 memory leaks。
+
+若是直接使用 stream 來進行 for loop, for each, await loop 時， stream 將無法停止，
+必須使用 take, takeWhile 等方式來讓 stream 停止。
+
 [這些我都寫在這個範例當中](lib/stream/stream_screen.dart)。
 
 
