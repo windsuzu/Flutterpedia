@@ -32,8 +32,8 @@ Future 就像一般的 sync function 一樣，只是會在經過一段時間後�
 
 
 > 一些實用的文章
-> [A Guide to Using Futures in Flutter for Beginners](https://medium.com/flutter-community/a-guide-to-using-futures-in-flutter-for-beginners-ebeddfbfb967)
-> [Flutter之FutureBuilder的学习和使用](https://juejin.im/post/5bfa9feee51d4524d9250689)
+> * [A Guide to Using Futures in Flutter for Beginners](https://medium.com/flutter-community/a-guide-to-using-futures-in-flutter-for-beginners-ebeddfbfb967)
+> * [Flutter之FutureBuilder的学习和使用](https://juejin.im/post/5bfa9feee51d4524d9250689)
 
 # Stream
 今天你連續網購了好幾個東西，貨物將會一一送到你手上，大部分會送到你手上，但順序不一，也有可能發生意外，導致你收不到東西。
@@ -74,9 +74,9 @@ Stream 也可以決定是 `單一訂閱 (single subscription)` 或 `廣播 (broa
 
 
 > 一些實用的文章
-> [Understanding Streams in Flutter (Dart)](https://medium.com/flutter-community/understanding-streams-in-flutter-dart-827340437da6)
-> [Using Streams in Flutter](https://medium.com/@ayushpguptaapg/using-streams-in-flutter-62fed41662e4)
-> [Using StreamBuilder in Flutter](https://medium.com/@sidky/using-streambuilder-in-flutter-dcc2d89c2eae)
+> * [Understanding Streams in Flutter (Dart)](https://medium.com/flutter-community/understanding-streams-in-flutter-dart-827340437da6)
+> * [Using Streams in Flutter](https://medium.com/@ayushpguptaapg/using-streams-in-flutter-62fed41662e4)
+> * [Using StreamBuilder in Flutter](https://medium.com/@sidky/using-streambuilder-in-flutter-dcc2d89c2eae)
 
 
 # Async / Await
@@ -121,4 +121,4 @@ void getInfo() async {
 ```
 
 > 一些實用的文章
-> [Asynchronous programming: futures & async-await](https://dart.dev/tutorials/language/futures)
+> * [Asynchronous programming: futures & async-await](https://dart.dev/tutorials/language/futures)
