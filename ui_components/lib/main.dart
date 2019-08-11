@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:ui_components/assets_screen.dart';
 import 'package:ui_components/auto_size_text_screen.dart';
 import 'package:ui_components/backdrop_filter_screen.dart';
+import 'package:ui_components/cached_network_image_screen.dart';
 import 'package:ui_components/clip_screen.dart';
-import 'package:ui_components/image_screen.dart';
+import 'package:ui_components/in_app_notification_view_screen.dart';
 import 'package:ui_components/ink_screen.dart';
 import 'package:ui_components/offline_screen.dart';
+import 'package:ui_components/wave_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -18,10 +20,12 @@ class MyApp extends StatelessWidget {
         "/assets": (_) => AssetsScreen(),
         "/auto_size_text": (_) => AutoSizeTextScreen(),
         "/backdrop_filter": (_) => BackdropFilterScreen(),
+        "/cached_network_image": (_) => CachedNetworkImageScreen(),
         "/clip": (_) => ClipScreen(),
-        "/image": (_) => ImageScreen(),
+        "/in_app_notification_view": (_) => InAppNotificationViewScreen(),
         "/ink": (_) => InkScreen(),
         "/offline": (_) => OfflineScreen(),
+        "/wave": (_) => WaveScreen(),
       },
       home: MyHomePage(title: 'UI Components Demo'),
     );
@@ -62,8 +66,10 @@ final routes = {
   "Assets": "/assets",
   "AutoSizeText": "/auto_size_text",
   "BackdropFilter": "/backdrop_filter",
+  "Cached Network Image": "/cached_network_image",
   "Clip": "/clip",
-  "Image": "/image",
+  "In-App Notification View": "/in_app_notification_view",
   "Ink": "/ink",
   "Offline": "/offline",
+  "Wave": "/wave",
 };

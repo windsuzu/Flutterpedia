@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class ImageScreen extends StatelessWidget {
+class WaveScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Image Demo'),
+        title: Text('Wave Demo'),
       ),
       body: Center(
         child: Container(

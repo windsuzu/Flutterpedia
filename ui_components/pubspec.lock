@@ -8,6 +8,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.3.0"
+  auto_size_text:
+    dependency: "direct main"
+    description:
+      name: auto_size_text
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.0.2+1"
   boolean_selector:
     dependency: transitive
     description:
@@ -29,6 +36,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.14.11"
+  connectivity:
+    dependency: transitive
+    description:
+      name: connectivity
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.4.3+7"
   cupertino_icons:
     dependency: "direct main"
     description:
@@ -41,6 +55,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_offline:
+    dependency: "direct main"
+    description:
+      name: flutter_offline
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.2.4+1"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -144,3 +165,4 @@ packages:
     version: "2.0.8"
 sdks:
   dart: ">=2.2.2 <3.0.0"
+  flutter: ">=1.2.0 <2.0.0"
