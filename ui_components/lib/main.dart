@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:overlay_support/overlay_support.dart';
 import 'package:ui_components/assets_screen.dart';
 import 'package:ui_components/auto_size_text_screen.dart';
 import 'package:ui_components/backdrop_filter_screen.dart';
@@ -14,20 +15,23 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'UI Components',
-      routes: {
-        "/assets": (_) => AssetsScreen(),
-        "/auto_size_text": (_) => AutoSizeTextScreen(),
-        "/backdrop_filter": (_) => BackdropFilterScreen(),
-        "/cached_network_image": (_) => CachedNetworkImageScreen(),
-        "/clip": (_) => ClipScreen(),
-        "/in_app_notification_view": (_) => InAppNotificationViewScreen(),
-        "/ink": (_) => InkScreen(),
-        "/offline": (_) => OfflineScreen(),
-        "/wave": (_) => WaveScreen(),
-      },
-      home: MyHomePage(title: 'UI Components Demo'),
+    // ! This widget is needed for the first approach for in-app notification.
+    return OverlaySupport(
+      child: MaterialApp(
+        title: 'UI Components',
+        routes: {
+          "/assets": (_) => AssetsScreen(),
+          "/auto_size_text": (_) => AutoSizeTextScreen(),
+          "/backdrop_filter": (_) => BackdropFilterScreen(),
+          "/cached_network_image": (_) => CachedNetworkImageScreen(),
+          "/clip": (_) => ClipScreen(),
+          "/in_app_notification_view": (_) => InAppNotificationViewScreen(),
+          "/ink": (_) => InkScreen(),
+          "/offline": (_) => OfflineScreen(),
+          "/wave": (_) => WaveScreen(),
+        },
+        home: MyHomePage(title: 'UI Components Demo'),
+      ),
     );
   }
 }

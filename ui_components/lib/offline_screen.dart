@@ -25,11 +25,7 @@ class OfflineScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              Center(
-                child: new Text(
-                  'Yay!',
-                ),
-              ),
+              Center(child: child),
             ],
           );
         },

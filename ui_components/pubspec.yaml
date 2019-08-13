@@ -22,7 +22,10 @@ dependencies:
   cupertino_icons: ^0.1.2
   auto_size_text: ^2.0.2+1
   flutter_offline: ^0.2.4+1
-  
+  cached_network_image: ^1.1.1
+  flushbar: ^1.8.2
+  overlay_support: ^1.0.1
+  wave: ^0.0.8
 
 dev_dependencies:
   flutter_test:
