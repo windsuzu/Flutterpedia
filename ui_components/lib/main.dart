@@ -8,6 +8,8 @@ import 'package:ui_components/clip_screen.dart';
 import 'package:ui_components/in_app_notification_view_screen.dart';
 import 'package:ui_components/ink_screen.dart';
 import 'package:ui_components/offline_screen.dart';
+import 'package:ui_components/spin_kit_screen.dart';
+import 'package:ui_components/staggered_grid_view_screen.dart';
 import 'package:ui_components/wave_screen.dart';
 
 void main() => runApp(MyApp());
@@ -28,6 +30,8 @@ class MyApp extends StatelessWidget {
           "/in_app_notification_view": (_) => InAppNotificationViewScreen(),
           "/ink": (_) => InkScreen(),
           "/offline": (_) => OfflineScreen(),
+          "/spin_kit": (_) => SpinKitScreen(),
+          "/staggered_grid_view": (_) => StaggeredGridViewScreen(),
           "/wave": (_) => WaveScreen(),
         },
         home: MyHomePage(title: 'UI Components Demo'),
@@ -75,5 +79,7 @@ final routes = {
   "In-App Notification View": "/in_app_notification_view",
   "Ink": "/ink",
   "Offline": "/offline",
+  "SpinKit": "/spin_kit",
+  "Staggered GridView": "/staggered_grid_view",
   "Wave": "/wave",
 };

@@ -110,9 +110,39 @@ Ink 可以實現在 Android material design 裡的 ripple effect.
 
 一個實用的 third party library，能夠快速的讓我們自定義有無網路時的畫面
 
-
-
 > [Full code](lib/offline_screen.dart)
+
+
+## 💿 SpinKit
+> Pub: https://pub.dev/packages/flutter_spinkit
+
+用於呈現加載動畫的 third party library ，非常實用以及美觀！
+
+> [Full code](lib/spin_kit_screen.dart)
+
+
+## 🔭 Staggered GridView
+> Pub: https://pub.dev/packages/flutter_staggered_grid_view
+
+比 flutter 內建的 GridView builder 還要更加靈活，可以使用 StaggeredTile 自定義格局大小。
+
+* `StaggeredGridView.count` 和 `StaggeredGridView.extent` 可以透過定義好的 Tiles 和 StaggeredTiles 建立 GridView
+* `StaggeredGridView.countBuilder` 和 `StaggeredGridView.extentBuilder` 則是根據 data 即時 build UI
+
+StaggeredTile 則提供了三種方式來定義格局：
+* `StaggeredTile.count`
+* `StaggeredTile.extent`
+* `StaggeredTile.fit`
+
+而 fit 可以讓我們動態的依據 cell 不同的高度來建立格局。
+
+1. 我會用第一種沒有 builder 的方式，來建立 Fixed Height with StaggeredTile.count
+
+2. 我會用第二種包含 builder 的方式，來建立 Dynamic Height with StaggeredTile.fit
+
+> [Full code](lib/staggered_grid_view_screen.dart)
+
+> 作者有更多的 Examples 可以參考 [這裡](https://github.com/letsar/flutter_staggered_grid_view/tree/master/example)
 
 ## 🎏 Wave
 > Pub: https://pub.dev/packages/wave
